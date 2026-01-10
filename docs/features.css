@@ -1,135 +1,135 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../images/featuresbg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    filter: brightness(0.5);
-    z-index: 0;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/featuresbg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  filter: brightness(0.5);
+  z-index: 0;
 }
 
 body > * {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
-.main-container{
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    color: white;
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  color: white;
 }
-.left-container{
-    flex: 1;
-    display: flex;
-    gap: 50px;
+.left-container {
+  flex: 1;
+  display: flex;
+  gap: 50px;
 }
 
 a {
-    text-decoration: none;       
-    color: white;                
-    font-weight: 500;            
-    transition: color 0.3s ease; 
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #ffcc00;              
+  color: #ffcc00;
 }
 
-.heading{
-    color: white;
-    text-align: center;
-    margin-top: 30px;
+.heading {
+  color: white;
+  text-align: center;
+  margin-top: 30px;
 }
 
-.cards-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 40px;
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
 }
 
-.card{
-    position: relative;
-    flex: 0 0 calc(30% - 30px);
-    height: 250px;
-    background-color: rgba(255, 255, 255, 0.08);
-    border: 1px solid #ffcc00;
-    border-radius: 12px;
-    padding: 0px;
-    color: white;
-    text-align: center;
-    overflow: hidden;
-    transition: transform 0.3s ease;
+.card {
+  position: relative;
+  flex: 0 0 calc(30% - 30px);
+  height: 250px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid #ffcc00;
+  border-radius: 12px;
+  padding: 0px;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
-.card:hover{
-    transform: scale(1.03);
+.card:hover {
+  transform: scale(1.03);
 }
 
-.right{
-    background-color: #ffcc00;
-    border: 2px solid black;
-    color: #002244;
+.right {
+  background-color: #ffcc00;
+  border: 2px solid black;
+  color: #002244;
 }
 
-.left{
-    background-color: #002244;
-    border: 2px solid white;
-    color: white;
+.left {
+  background-color: #002244;
+  border: 2px solid white;
+  color: white;
 }
 
-.card svg{
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 100px;
+.card svg {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
 }
 
-.card h3{
-    margin-top: 130px; /* adjust based on your SVG height */
-    font-size: 20px;
+.card h3 {
+  margin-top: 130px; /* adjust based on your SVG height */
+  font-size: 20px;
 }
 
-.get-started{
-    color: white; 
-    background-color: #ffcc00;
-    font-size: large;
-    font-weight: bold; 
-    width: 150px;
-    height: 50px;
-    border-radius: 5px;
-    border: 2px solid white;
-    outline: 0;
-    cursor: pointer;
-    transition: color 0.3s ease;
+.get-started {
+  color: white;
+  background-color: #ffcc00;
+  font-size: large;
+  font-weight: bold;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  border: 2px solid white;
+  outline: 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.get-started:hover{
-    color: #002244;
-    border-color: black;
+.get-started:hover {
+  color: #002244;
+  border-color: black;
 }
 
 a.active {
-    color: #ffcc00;
-    font-size: 16px;
-    font-weight: bold;
+  color: #ffcc00;
+  font-size: 16px;
+  font-weight: bold;
 }
