@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymVerse-Dashboard</title>
+    <link rel="stylesheet" href="supplements.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="heading"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	  viewBox="0 0 195.989 195.989"
+	 xml:space="preserve">
+<g>
+	<path d="M195.935,84.745c-2.07-15.789-20.983-37.722-20.983-37.722c-4.933-12.69-17.677-8.47-17.677-8.47l-8.507,2.295
+		c-8.421,2.533-8.025,13.555-4.372,15.789c1.602,0.978,6.297,1.233,7.685,0c0.414-0.374,0.098-2.165,0.098-2.165
+		c8.933,0.487,9.584-4.688,9.584-4.688l3.039-0.606c3.044-1.665,3.72,5.395,3.72,5.395c-2.07,20.009,6.595,27.334,6.595,27.334
+		c-1.254,3.973-5.62,3.206-5.62,3.206c-13.853-7.197-24.131,6.403-24.131,6.403c-7.831-6.671-23.991,5.148-23.991,5.148
+		c-9.055,1.79-9.591-9.106-9.591-9.106s-0.42-6.941-0.713-7.578c-0.426-1.084,1.925-0.536,1.925-0.536
+		c7.965-14.495,0-12.559,0-12.559c1.93-25.008-19.991-19.759-19.991-19.759C76.143,51.748,82.32,68.544,82.32,68.544
+		c-3.702-0.904-1.927,4.616-1.927,4.616c0.956,8.473,3.985,6.552,3.985,6.552c0.393,2.968,2.058,7.054,2.058,7.054l0.256,6.808
+		c-1.903,11.298-13.829,1.927-13.829,1.927c-6.996-9.864-24.536-4.348-24.536-4.348c-9.061-13.479-23.333-5.785-23.333-5.785
+		c1.516-3.349-0.256-20.009-0.256-20.009c1.772-2.058,5.331-13.712,5.331-13.712c1.522,2.058,8.388,2.42,8.388,2.42
+		c0.524,3.093,2.731,4.351,2.731,4.351c4.665,1.934,2.731-13.335,2.731-13.335c1.221-4.847-6.573-6.013-6.573-6.013
+		c-13.594-3.739-16.742,4.847-16.742,4.847l-3.547,7.712c-5.063,5.52-14.565,24.368-14.565,24.368
+		C-2.977,90.999,2.26,93.705,2.26,93.705l9.864,7.667c16.736,16.203,26.85,13.877,26.85,13.877
+		c13.46-0.256,12.352,8.458,12.352,8.458c0.536,13.342,9.852,27.182,9.852,27.182c0.685,2.326,1.172,4.786,1.656,7.222h63.811
+		c1.182-2.636,2.412-5.097,3.508-6.625c5.225-7.38,12.361-16.952,14.991-23.297c5.151-12.477,7.594-12.185,7.594-12.185
+		c18.383,0,28.527-13.329,28.527-13.329c3.014-3.86,7.593-8.616,10.948-10.522C196.726,89.571,195.935,84.745,195.935,84.745z"/>
+</g>
+</svg>
+<h1><span class="first">G</span>ym<span class="last"><span class="second">V</span>erse</span></h1></div>
+<button class="log-out">LOG OUT</button>
+    </div>
+<div class="container">
+    <div class="left-container">
+        <button class="sidebar-toggle">
+			<span class="arrow">⮜</span>
+	</button>
+  <div class="sidebar-option">
+    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M1 6V15H6V11C6 9.89543 6.89543 9 8 9C9.10457 9 10 9.89543 10 11V15H15V6L8 0L1 6Z" fill="#000000"/>
+    </svg>
+    <span><a href="../public/index.html">HOME</a></span>
+  </div>
+  <div class="sidebar-option">
+    <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 12C12 11.4477 12.4477 11 13 11H19C19.5523 11 20 11.4477 20 12V19C20 19.5523 19.5523 20 19 20H13C12.4477 20 12 19.5523 12 19V12Z" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+<path d="M4 5C4 4.44772 4.44772 4 5 4H8C8.55228 4 9 4.44772 9 5V19C9 19.5523 8.55228 20 8 20H5C4.44772 20 4 19.5523 4 19V5Z" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+<path d="M12 5C12 4.44772 12.4477 4 13 4H19C19.5523 4 20 4.44772 20 5V7C20 7.55228 19.5523 8 19 8H13C12.4477 8 12 7.55228 12 7V5Z" stroke="#000000" stroke-width="2" stroke-linecap="round"/>
+</svg>
+<span><a href="index.html">DASHBOARD</a></span>
+  </div>
+  <div class="sidebar-option">
+    <svg height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 80.928 80.928" xml:space="preserve">
+<g>
+	<g>
+		<path style="fill:#010002;" d="M65.383,0c-1.09,0-1.974,0.884-1.974,1.974v7.675H17.52V1.974C17.52,0.884,16.636,0,15.546,0
+			s-1.973,0.884-1.973,1.974v19.297c0,1.089,0.883,1.974,1.973,1.974s1.974-0.885,1.974-1.974v-7.677h3.297
+			c-0.051,0.145-0.088,0.297-0.088,0.455V31.08v2.412c0,0.704,0.559,1.297,1.333,1.518h1.302H29h2.204v0.015v20.783H21.175
+			c-3.094,0-5.612,2.509-5.629,5.598V75.3c0,3.103,2.525,5.628,5.629,5.628s5.628-2.525,5.628-5.628v-8.234h4.4h3.947h4.955h4.955
+			h3.946h4.621V75.3c0,3.103,2.525,5.628,5.628,5.628s5.628-2.525,5.628-5.628V61.436c0-3.104-2.525-5.629-5.628-5.629H49.008
+			V35.024v-0.013h2.231h6.019h1.292c0.778-0.22,1.339-0.812,1.339-1.52v-2.412v-17.03c0-0.158-0.037-0.311-0.089-0.455h3.61v7.677
+			c0,1.089,0.884,1.974,1.974,1.974c1.089,0,1.973-0.885,1.973-1.974V1.973C67.356,0.884,66.474,0,65.383,0z M24.697,31.08V14.049
+			c0-0.158-0.037-0.311-0.089-0.455h10.536c-3.745,1.844-6.334,5.687-6.334,10.134c0,2.623,0.911,5.026,2.417,6.945
+			c-0.008,0.081-0.023,0.159-0.023,0.241v0.164l0,0L24.697,31.08z M40.107,16.376c4.052,0,7.349,3.297,7.349,7.352
+			c0,4.054-3.297,7.351-7.349,7.351c-4.053,0-7.349-3.297-7.349-7.351C32.758,19.673,36.053,16.376,40.107,16.376z M59.257,59.754
+			c0.892,0,1.623,0.697,1.679,1.574l0.003,13.971c0,0.928-0.754,1.682-1.682,1.682c-0.929,0-1.682-0.754-1.682-1.682V63.117h-8.567
+			h-3.99h-4.911h-4.94h-3.963h-8.348v12.182c0,0.928-0.754,1.682-1.681,1.682c-0.928,0-1.683-0.754-1.683-1.682V61.682l0.006-0.042
+			l-0.002-0.305c0.052-0.881,0.785-1.582,1.679-1.582h10.029h3.991v-3.946V35.024h9.823v20.783v3.946h3.99L59.257,59.754
+			L59.257,59.754z M55.92,14.049V31.08h-6.912v-0.002v-0.069c0-0.112-0.016-0.221-0.029-0.329c1.509-1.919,2.424-4.326,2.424-6.952
+			c0-4.447-2.59-8.29-6.335-10.134h10.941C55.957,13.738,55.92,13.89,55.92,14.049z"/>
+		<path style="fill:#010002;" d="M69.769,0c-1.09,0-1.974,0.884-1.974,1.974v19.297c0,1.089,0.884,1.974,1.974,1.974
+			s1.973-0.885,1.973-1.974V1.973C71.742,0.884,70.857,0,69.769,0z"/>
+		<path style="fill:#010002;" d="M74.195,0c-1.09,0-1.974,0.884-1.974,1.974v19.297c0,1.089,0.883,1.974,1.974,1.974
+			s1.973-0.885,1.973-1.974V1.973C76.168,0.884,75.285,0,74.195,0z"/>
+		<path style="fill:#010002;" d="M6.734,0c-1.09,0-1.973,0.884-1.973,1.974v19.297c0,1.089,0.883,1.974,1.973,1.974
+			s1.974-0.885,1.974-1.974V1.973C8.709,0.884,7.825,0,6.734,0z"/>
+		<path style="fill:#010002;" d="M11.119,0C10.03,0,9.146,0.884,9.146,1.974v19.297c0,1.089,0.884,1.974,1.973,1.974
+			c1.09,0,1.975-0.885,1.975-1.974V1.973C13.093,0.884,12.209,0,11.119,0z"/>
+	</g>
+</g>
+</svg>
+<span><a href="./workout.html">WORKOUTS</a></span>
+  </div>
+  <div class="sidebar-option">
+    <svg fill="#000000" width="800px" height="800px" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><title>ionicons-v5-m</title><path d="M438.71,159.43c-17.6-28.31-45.5-43.8-85.28-47.37-22.82-2-50.23,4.94-72.25,10.55C271.26,125.14,260,128,256,128s-15.18-2.86-25-5.39c-22.08-5.65-49.56-12.69-72.45-10.54-38.53,3.61-66,19.19-84,47.62S48,229,48,288c0,61.28,29.53,114.58,47.13,140.89C116.82,461.34,149.25,496,175.2,496c18.57,0,34.12-7.23,47.82-13.64C243,473,256,472,256,472s11,0,31.94,10.11C301.65,488.73,317.3,496,336.8,496c26.58,0,59.08-34.69,80.63-67.15C434.82,402.65,464,349.52,464,288,464,228,456,187.17,438.71,159.43ZM216,352c-13.25,0-24-21.49-24-48s10.75-48,24-48,24,21.49,24,48S229.25,352,216,352Zm80,0c-13.25,0-24-21.49-24-48s10.75-48,24-48,24,21.49,24,48S309.25,352,296,352Z"/><path d="M323.72,82.76C353.68,52.82,352,16.18,352,16.14h0s-35.77-3.76-67.23,27.67S256.06,112,256.06,112,293.74,112.71,323.72,82.76Z"/></svg>
+    <span><a href="./nutrition.html">NUTRITION</a></span>
+  </div>
+  <div class="sidebar-option">
+    <svg fill="#000000" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 width="800px" height="800px" viewBox="0 0 146.182 146.182"
+	 xml:space="preserve">
+<g>
+	<path d="M81.64,133c-6.421,4.402-20.012,7.112-34.327,6.953c-22.786-0.279-37.238-7.233-37.184-11.897l0.165-13.092
+		c7.968,5.456,22.621,8.403,37.217,8.573c0.012,0,0.024,0,0.037,0c1.702,0,3.1-1.363,3.118-3.074l0.469-38.43
+		c0.006-0.828-0.304-1.619-0.886-2.204c-0.579-0.603-1.364-0.932-2.195-0.943c-22.776-0.274-37.229-7.228-37.174-11.898
+		l0.174-14.029c7.971,5.456,22.624,8.412,37.22,8.58c0.487,0.006,0.965,0.006,1.44,0.006c10.62,0,20.603-1.435,28.266-4.089
+		c3.267-1.142,5.751-2.384,7.712-3.66l-0.341,27.654c-0.019,1.729,1.363,3.142,3.081,3.16c0.012,0,0.024,0,0.036,0
+		c1.699,0,3.1-1.37,3.118-3.081l0.456-37.132l0,0l0,0c0.043-3.617-2.229-8.686-12.488-12.857l0.213-18.033l0,0l0,0
+		c0.109-8.61-15.387-13.305-30.75-13.497L48.028,0c-14.41,0-29.961,3.998-30.071,12.748l0,0l-0.219,18.018
+		C9.551,33.877,5,38.28,4.929,43.325l0,0L4.643,66.893l0,0c0,0.006,0,0.006,0,0.012L3.894,127.97
+		c-0.137,11.594,21.693,17.938,43.337,18.206c0.475,0.006,0.94,0.006,1.416,0.006c15.327,0,29.231-3.057,36.513-8.056
+		c1.426-0.975,1.784-2.91,0.805-4.336C85.001,132.39,83.059,132.038,81.64,133z M44.862,85.042l-0.393,32.199
+		c-20.977-0.847-34.121-7.374-34.065-11.825l0,0l0.356-28.887C18.161,81.595,31.323,84.517,44.862,85.042z M23.937,33.561
+		c0.08-0.387,0.08-0.767,0.012-1.172l0.137-11.356c5.897,3.319,15.269,5.109,24.609,5.228l0.986,0.013
+		c8.729,0,17.863-1.48,23.745-4.579l-0.17,13.676c-0.024,2.059-8.403,6.777-24.758,6.583c-7.073-0.086-13.655-1.145-18.557-2.981
+		c-4.408-1.644-6.037-3.458-6.031-4.213L23.937,33.561z M48.028,6.245l0.911,0.006c16.279,0.198,24.618,5.124,24.591,7.183
+		c-0.024,1.97-8.168,6.597-23.842,6.597l-0.911-0.006c-16.273-0.194-24.612-5.121-24.585-7.185
+		C24.217,10.869,32.352,6.245,48.028,6.245z M18.179,37.314c0.95,2.463,3.499,5.237,9.584,7.511
+		c5.556,2.076,12.888,3.275,20.658,3.367c0.326,0,0.648,0.006,0.968,0.006c13.405,0,26.674-3.446,29.487-10.169
+		c5.035,2.345,6.936,4.777,6.917,6.312l0,0c-0.019,1.769-2.618,4.725-9.874,7.237c-7.346,2.545-17.229,3.86-27.586,3.741
+		c-22.783-0.28-37.235-7.23-37.181-11.883C11.183,41.884,13.141,39.528,18.179,37.314z M138.592,79.415
+		c1.2,1.23,1.176,3.203-0.055,4.409c-0.608,0.59-1.395,0.889-2.18,0.889c-0.81,0-1.62-0.316-2.229-0.938L119.338,68.61
+		l-39.841,38.876l14.79,15.162c1.2,1.23,1.176,3.203-0.055,4.408c-0.608,0.597-1.395,0.889-2.18,0.889
+		c-0.81,0-1.626-0.316-2.229-0.943L55.899,92.226c-1.206-1.229-1.179-3.203,0.055-4.408c1.236-1.193,3.206-1.169,4.408,0.061
+		l14.791,15.162l39.844-38.879l-14.79-15.15c-1.206-1.236-1.176-3.206,0.055-4.409c1.236-1.196,3.209-1.178,4.408,0.055
+		L138.592,79.415z M80.368,129.583l-27.282-27.955c-1.203-1.23-1.178-3.209,0.055-4.409c1.236-1.193,3.206-1.175,4.409,0.062
+		l27.283,27.949c1.205,1.236,1.175,3.215-0.055,4.408c-0.609,0.597-1.395,0.889-2.181,0.889
+		C81.799,130.527,80.989,130.21,80.368,129.583z M141.345,74.431c-0.604,0.594-1.389,0.886-2.174,0.886
+		c-0.816,0-1.626-0.311-2.235-0.935L109.657,46.43c-1.199-1.236-1.175-3.206,0.061-4.409c1.23-1.196,3.209-1.172,4.409,0.055
+		l27.279,27.952C142.599,71.258,142.587,73.222,141.345,74.431z M59.397,111.431l11.311,11.594c1.203,1.23,1.178,3.203-0.058,4.409
+		c-0.603,0.591-1.392,0.883-2.177,0.883c-0.81,0-1.62-0.311-2.231-0.932l-11.311-11.594c-1.203-1.229-1.178-3.203,0.058-4.409
+		C56.215,110.177,58.191,110.202,59.397,111.431z M123.778,48.607c-1.2-1.23-1.176-3.206,0.061-4.402
+		c1.23-1.2,3.203-1.179,4.408,0.055l11.314,11.591c1.199,1.236,1.175,3.212-0.062,4.408c-0.603,0.6-1.395,0.892-2.18,0.892
+		c-0.81,0-1.62-0.311-2.229-0.941L123.778,48.607z"/>
+</g>
+</svg>
+<span><a href="./supplements.html">SUPPLEMENTS</a></span>
+  </div>
+  <div class="sidebar-option">
+    <svg width="800px" height="800px" viewBox="0 0 6.3500002 6.3500002" id="svg1976" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg">
+
+<defs id="defs1970"/>
+
+<g id="layer1" style="display:inline">
+
+<path d="m 0.26485,5.8204456 a 0.2645835,0.2645835 0 0 0 -0.26563,0.26563 0.2645835,0.2645835 0 0 0 0.26563,0.26367 h 5.82031 a 0.2645835,0.2645835 0 0 0 0.26562,-0.26367 0.2645835,0.2645835 0 0 0 -0.26562,-0.26563 z" id="path726" style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"/>
+
+<path d="m 1.16328,3.9688856 c -0.34722,0 -0.63476,0.28754 -0.63476,0.63477 v 1.48242 a 0.26460996,0.26460996 0 0 0 0.26562,0.26367 h 1.0586 a 0.26460996,0.26460996 0 0 0 0.26367,-0.26367 v -1.48242 c 0,-0.34723 -0.28755,-0.63477 -0.63477,-0.63477 z" id="path728" style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"/>
+
+<path d="m 3.0168,3.0684956 c -0.34722,0 -0.63477,0.28753 -0.63477,0.63477 v 2.38281 a 0.26460996,0.26460996 0 0 0 0.26367,0.26367 h 1.0586 a 0.26460996,0.26460996 0 0 0 0.26367,-0.26367 v -2.38281 c 0,-0.34724 -0.28755,-0.63477 -0.63477,-0.63477 z" id="path730" style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"/>
+
+<path d="m 4.86836,2.2755256 c -0.34722,0 -0.63477,0.28754 -0.63477,0.63477 v 3.17578 a 0.26460996,0.26460996 0 0 0 0.26368,0.26367 h 1.05859 a 0.26460996,0.26460996 0 0 0 0.26563,-0.26367 v -3.17578 c 0,-0.34723 -0.2895,-0.63477 -0.63672,-0.63477 z" id="path732" style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"/>
+
+<path d="M 4.6205208,2.5237e-4 A 0.2645835,0.2645835 0 0 0 4.3564534,0.26380219 0.2645835,0.2645835 0 0 0 4.6205208,0.52941905 H 4.8938883 C 3.3974791,1.8159538 1.8306324,2.6151331 0.2161369,2.9142865 A 0.2645835,0.2645835 0 0 0 0.0052984,3.2227949 0.2645835,0.2645835 0 0 0 0.3117388,3.4357016 C 2.050091,3.1136013 3.722697,2.2498105 5.2923138,0.88753671 V 1.1991456 A 0.2645835,0.2645835 0 0 0 5.5558626,1.4647625 0.2645835,0.2645835 0 0 0 5.8214805,1.1991456 V 0.41986501 C 5.8215308,0.19150501 5.62816,2.0237e-4 5.3998008,2.5237e-4 Z" id="path734" style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.529167;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000"/>
+
+</g>
+
+</svg>
+<span>PROGRESS</span>
+  </div>
+  <div class="sidebar-option">
+    <svg width="800px" height="800px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    
+    <title>settings</title>
+    <desc>Created with Sketch Beta.</desc>
+    <defs>
+
+</defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Icon-Set-Filled" sketch:type="MSLayerGroup" transform="translate(-103.000000, -362.000000)" fill="#000000">
+            <path d="M118,382 C115.261,382 113.042,379.762 113.042,377 C113.042,374.238 115.261,372 118,372 C120.739,372 122.959,374.238 122.959,377 C122.959,379.762 120.739,382 118,382 L118,382 Z M132.008,380.536 L129.685,379.184 C129.815,378.474 129.901,377.749 129.901,377 C129.901,376.252 129.815,375.526 129.685,374.816 L132.008,373.464 C132.957,372.912 133.281,371.688 132.733,370.732 L130.75,367.268 C130.203,366.312 128.989,365.983 128.041,366.536 L125.694,367.901 C124.598,366.961 123.352,366.192 121.967,365.697 L121.967,364 C121.967,362.896 121.079,362 119.983,362 L116.017,362 C114.921,362 114.033,362.896 114.033,364 L114.033,365.697 C112.648,366.192 111.402,366.961 110.306,367.901 L107.959,366.536 C107.011,365.983 105.797,366.312 105.25,367.268 L103.267,370.732 C102.719,371.688 103.044,372.912 103.992,373.464 L106.315,374.816 C106.185,375.526 106.099,376.252 106.099,377 C106.099,377.749 106.185,378.474 106.315,379.184 L103.992,380.536 C103.044,381.088 102.719,382.312 103.267,383.268 L105.25,386.732 C105.797,387.688 107.011,388.017 107.959,387.464 L110.306,386.099 C111.402,387.039 112.648,387.809 114.033,388.303 L114.033,390 C114.033,391.104 114.921,392 116.017,392 L119.983,392 C121.079,392 121.967,391.104 121.967,390 L121.967,388.303 C123.352,387.809 124.598,387.039 125.694,386.099 L128.041,387.464 C128.989,388.017 130.203,387.688 130.75,386.732 L132.733,383.268 C133.281,382.312 132.957,381.088 132.008,380.536 L132.008,380.536 Z M118,374 C116.357,374 115.025,375.344 115.025,377 C115.025,378.657 116.357,380 118,380 C119.643,380 120.975,378.657 120.975,377 C120.975,375.344 119.643,374 118,374 L118,374 Z" id="settings" sketch:type="MSShapeGroup">
+
+</path>
+        </g>
+    </g>
+</svg>
+<span>SETTINGS</span>
+  </div>
+  <div class="sidebar-option">
+	<svg fill="#000000" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4,21a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V3a1,1,0,0,0-1-1H5A1,1,0,0,0,4,3ZM12,7.5a2,2,0,1,1-2,2A2,2,0,0,1,12,7.5ZM8.211,16.215a4,4,0,0,1,7.578,0A.993.993,0,0,1,14.83,17.5H9.18A1,1,0,0,1,8.211,16.215Z"/></svg>
+	<span><a href="../public/contact.html">CONTACT US</a></span>
+  </div>
+</div>
+<div class="right-container">
+    <div class="input-wrapper">
+        <svg class="input-icon"  width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+        <input type="text" placeholder="search...">
+    </div>
+    <div class="card-container">
+        <div class="card whey-protein">
+            <h3>Whey Protein</h3>
+            <img src="../images/whey.png" alt="" width="150px" height="150px">
+            <span><strong>What it is:</strong>A complete protein derived from milk. <br><strong>Use:</strong>Muscle building, recovery, and meeting daily protein needs.<br><strong>Safety:</strong>Well-tolerated. May cause minor digestive issues if lactose-intolerant.</span><br>
+    </div>
+        <div class="card casein-protein">
+            <h3>Casein Protein</h3>
+            <img src="../images/casein.png" alt="" width="150px" height="150px">
+            <span><strong>What it is:</strong>Slow-digesting milk protein. <br><strong>Use:</strong>Ideal before sleep to prevent muscle breakdown overnight.<br><strong>Safety:</strong>Safe for most. Not suitable for those with milk allergies.</span><br>
+    </div>
+    <div class="card creatine creatine-monohydrate">
+            <h3>Creatine Monohydrate</h3>
+            <img src="../images/creatine.png" alt="" width="150px" height="150px">
+            <span><strong>What it is:</strong>A compound naturally found in muscles. <br><strong>Use:</strong>Boosts strength, performance, and muscle volume.<br><strong>Safety:</strong>One of the most researched and safe supplements. Stay hydrated.</span><br>
+    </div>
+    <div class="card bcaa bcaas branched-chain-amino-acids">
+            <h3>BCAAs(Branched-Chain Amino Acids)</h3>
+            <img src="../images/bcaa.png" alt="" width="120px" height="120px">
+            <span><strong>What it is:</strong>Leucine, isoleucine, and valine – 3 essential amino acids.<br><strong>Use:</strong>Reduces muscle soreness and supports recovery.<br><strong>Safety:</strong>Generally safe. Not needed if protein intake is already high.</span><br>
+    </div>
+    <div class="card eaa eaas essential-amino-acids">
+            <h3>EAAs(Essential Amino Acids)</h3>
+            <img src="../images/eaa.png" alt="" width="160px" height="160px">
+            <span><strong>What it is:</strong>All 9 essential amino acids.<br><strong>Use:</strong>Supports muscle recovery and growth, especially during fasting or long workouts.<br><strong>Safety:</strong>Safe and effective when protein intake is low.</span><br>
+    </div>
+    <div class="card beta-alanine">
+            <h3>Beta-Alanine</h3>
+            <img src="../images/beta-alanine.png" alt="" width="150px" height="150px">
+            <span><strong>What it is:</strong>A non-essential amino acid.<br><strong>Use:</strong>Improves endurance and reduces muscle fatigue.<br><strong>Safety:</strong>Safe. May cause harmless "tingling" (paresthesia).</span><br>
+    </div>
+    <div class="card l-citulline citrulline-malate">
+            <h3>L-Citrulline/Citrulline Malate</h3>
+            <img src="../images/citrulline.png" alt="" width="120px" height="150px">
+            <span><strong>What it is:</strong>Amino acid that boosts nitric oxide.<br><strong>Use:</strong>Increases blood flow, pumps, and endurance.<br><strong>Safety:</strong>Well-tolerated and effective.</span><br>
+    </div>
+    <div class="card caffeine">
+            <h3>Caffeine</h3>
+            <img src="../images/caffeine.png" alt="" width="160px" height="150px">
+            <span><strong>What it is:</strong>Natural stimulant.<br><strong>Use:</strong>Enhances energy, alertness, and fat burning.<br><strong>Safety:</strong>Safe up to 400 mg/day. Can affect sleep or anxiety if overused.</span><br>
+    </div>
+    <div class="card l-theanine-+-caffeine">
+            <h3>L-Theanine + Caffeine</h3>
+            <img src="../images/cl-theanine.png" alt="" width="150px" height="150px">
+            <span><strong>What it is:</strong>An amino acid (L-theanine) often combined with caffeine.<br><strong>Use:</strong>Smooth, focused energy without jitters.<br><strong>Safety:</strong>Very safe when used in balanced doses.</span><br>
+    </div>
+    <div class="card multivitamins">
+            <h3>Multivitamins</h3>
+            <img src="../images/multivitamins.png" alt="" width="150px" height="150px">
+            <span><strong>What it is:</strong>A mix of essential vitamins and minerals.<br><strong>Use:</strong>Fills nutritional gaps in diet.<br><strong>Safety:</strong>Safe in recommended daily values. Avoid megadoses.</span><br>
+    </div>
+    <div class="card omega-3 fish-oil">
+            <h3>Omega-3(Fish Oil)</h3>
+            <img src="../images/fishoil.png" alt="" width="150px" height="150px">
+            <span><strong>What it is:</strong>Essential fatty acids (EPA & DHA).<br><strong>Use:</strong>Reduces inflammation, supports heart, brain, and joint health.<br><strong>Safety:</strong>Safe. High doses can thin blood—avoid before surgery.</span><br>
+    </div>
+    <div class="card glutamine">
+            <h3>Glutamine</h3>
+            <img src="../images/glutamine.png" alt="" width="180px" height="200px">
+            <span><strong>What it is:</strong>Amino acid involved in muscle recovery.<br><strong>Use:</strong>Recovery and gut health (mild benefit).<br><strong>Safety:</strong>Safe, though limited muscle benefit if diet is protein-rich.</span><br>
+    </div>
+    <div class="card zma">
+            <h3>ZMA(Zinc+Magnesium Aspartate+Vitamin B6)</h3>
+            <img src="../images/zma.png" alt="" width="100px" height="120px">
+            <span><strong>What it is:</strong> Mineral + vitamin combo.<br><strong>Use:</strong>Improves sleep and recovery; supports testosterone.<br><strong>Safety:</strong>Safe in moderate doses. Don’t exceed RDA.</span><br>
+    </div>
+    <div class="card collagen-peptides">
+            <h3>Collagen Peptides</h3>
+            <img src="../images/collagen.png" alt="" width="150px" height="150px">
+            <span><strong>What it is:</strong> Protein that supports skin, joints, and connective tissue.<br><strong>Use:</strong>Joint health and skin support.<br><strong>Safety:</strong>Very safe and well-tolerated.</span><br>
+    </div>
+    <div class="card ashwagandha">
+            <h3>Ashwagandha</h3>
+            <img src="../images/ashwagandha.png" alt="" width="150px" height="150px">
+            <span><strong>What it is:</strong> Adaptogenic herb from Ayurveda.<br><strong>Use:</strong>Reduces stress and cortisol; may improve strength and testosterone.<br><strong>Safety:</strong>Safe for most. Avoid if you have thyroid issues or are on sedatives.</span><br>
+    </div>
+    <div class="card green-tea-extract">
+            <h3>Green Tea Extract</h3>
+            <img src="../images/greentea.png" alt="" width="180px" height="180px">
+            <span><strong>What it is:</strong> Concentrated antioxidants (EGCG) and mild caffeine.<br><strong>Use:</strong>Supports fat metabolism and general health.<br><strong>Safety:</strong>Safe in moderation. Excess can affect liver in rare cases.</span><br>
+    </div>
+     <div class="card l-carnitine">
+            <h3>L-Carnitine</h3>
+            <img src="../images/lcarnitine.png" alt="" width="150px" height="150px">
+            <span><strong>What it is:</strong> Compound that helps transport fatty acids into mitochondria.<br><strong>Use:</strong>May help in fat metabolism and endurance.<br><strong>Safety:</strong>Generally safe, but limited fat loss effect unless deficient.</span><br>
+    </div>
+     <div class="card rhodiola-rosea">
+            <h3>Rhodiola Rosea</h3>
+            <img src="../images/rosea.png" alt="" width="150px" height="150px">
+            <span><strong>What it is:</strong> Adaptogenic herb.<br><strong>Use:</strong> Reduces fatigue and enhances mental clarity.<br><strong>Safety:</strong>Safe in moderate amounts.</span><br>
+    </div>
+     <div class="card shilajit">
+            <h3>Shilajit</h3>
+            <img src="../images/shilajit.png" alt="" width="180px" height="150px">
+            <span><strong>What it is:</strong> Mineral-rich resin from Himalayas<br><strong>Use:</strong> May boost testosterone, energy, stamina<br><strong>Safety:</strong>Safe when purified. Avoid unprocessed/raw forms.</span><br>
+    </div>
+    <div class="card mass-gainer mass-gainers">
+            <h3>Mass Gainers</h3>
+            <img src="../images/massgainer.png" alt="" width="150px" height="160px">
+            <span><strong>What it is:</strong> High-calorie blends of carbs, protein, and sometimes fats<br><strong>Use:</strong> Supports weight gain and bulking<br><strong>Safety:</strong>Safe if used correctly. Not for fat loss phases.</span><br>
+    </div>
+    </div>
+</div>
+</div>
+<script src="supplements.js"></script>
+</body>
+</html>
