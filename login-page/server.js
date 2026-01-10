@@ -20,16 +20,17 @@ app.use(bodyParser.json());
 app.use(express.static("public"));
 
 /* ---------- MongoDB Connection ---------- */
-mongoose.connect(process.env.MONGO_URI);
-
-const db = mongoose.connection;
-
-db.on("connected", () => console.log("✅ MongoDB connected"));
-db.on("error", (err) => console.error("❌ MongoDB error:", err));
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => console.log("✅ MongoDB connected"))
+  .catch((err) => {
+    console.error("❌ MongoDB error:", err.message);
+    process.exit(1);
+  });
 
 /* ---------- Routes ---------- */
 
-// Health check (VERY IMPORTANT for Render)
+// Health check
 app.get("/", (req, res) => {
   res.send("GymVerse Backend is Running 🚀");
 });
