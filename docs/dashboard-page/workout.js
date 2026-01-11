@@ -1,43 +1,43 @@
-const logOutBtn=document.querySelector('.log-out');
-const chest=document.querySelector(".chest");
-const back=document.querySelector(".back");
-const shoulders=document.querySelector(".shoulders");
-const legs=document.querySelector(".legs");
-const arms=document.querySelector(".arms");
-const core=document.querySelector(".core");
+const logOutBtn = document.querySelector(".log-out");
+const chest = document.querySelector(".chest");
+const back = document.querySelector(".back");
+const shoulders = document.querySelector(".shoulders");
+const legs = document.querySelector(".legs");
+const arms = document.querySelector(".arms");
+const core = document.querySelector(".core");
 
-
-logOutBtn.addEventListener("click", function() {
-    window.location.href = "../public/index.html";
-  });
-
-chest.addEventListener('click', function() {
-  window.location.href = './chest.html';
+logOutBtn.addEventListener("click", function () {
+  window.location.href =
+    "https://adityaxletscode.github.io/GymVerse---Your-Personal-Gym-Trainer/index.html";
 });
 
-back.addEventListener('click', function() {
-  window.location.href = './back.html';
+chest.addEventListener("click", function () {
+  window.location.href = "./chest.html";
 });
 
-shoulders.addEventListener('click', function() {
-  window.location.href = './shoulder.html';
+back.addEventListener("click", function () {
+  window.location.href = "./back.html";
 });
 
-legs.addEventListener('click', function() {
-  window.location.href = './legs.html';
+shoulders.addEventListener("click", function () {
+  window.location.href = "./shoulder.html";
 });
 
-arms.addEventListener('click', function() {
-  window.location.href = './arms.html';
+legs.addEventListener("click", function () {
+  window.location.href = "./legs.html";
 });
 
-core.addEventListener('click', function() {
-  window.location.href = './core.html';
+arms.addEventListener("click", function () {
+  window.location.href = "./arms.html";
 });
 
-const sidebar = document.querySelector('.left-container');
-const toggleBtn = document.querySelector('.sidebar-toggle');
+core.addEventListener("click", function () {
+  window.location.href = "./core.html";
+});
 
-toggleBtn.addEventListener('click', () => {
-  sidebar.classList.toggle('shrink');
+const sidebar = document.querySelector(".left-container");
+const toggleBtn = document.querySelector(".sidebar-toggle");
+
+toggleBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("shrink");
 });

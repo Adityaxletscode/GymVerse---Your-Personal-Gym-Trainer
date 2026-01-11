@@ -1,32 +1,97 @@
-const logOutBtn = document.querySelector('.log-out');
+const logOutBtn = document.querySelector(".log-out");
 const prompt = document.getElementById("prompt");
 const chatBody = document.querySelector(".chat-body");
 const submit = document.getElementById("submit");
 
-const Api_Url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyCQYz-s9O8tHJJu9yJwRNZTV7W-I2hNezg";
+const Api_Url =
+  "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=AIzaSyCQYz-s9O8tHJJu9yJwRNZTV7W-I2hNezg";
 
 const user = { data: null };
 
 const fitnessKeywords = [
-  "hi", "hello", "hey","Thank you","thank you","Thanks","thanks",
+  "hi",
+  "hello",
+  "hey",
+  "Thank you",
+  "thank you",
+  "Thanks",
+  "thanks",
 
+  "fitness",
+  "workout",
+  "exercise",
+  "gym",
+  "trainer",
+  "training",
+  "personal trainer",
+  "routine",
+  "plan",
+  "schedule",
 
-  "fitness", "workout", "exercise", "gym", "trainer", "training", "personal trainer",
-  "routine", "plan", "schedule",
+  "abs",
+  "core",
+  "biceps",
+  "tricep",
+  "triceps",
+  "legs",
+  "leg",
+  "chest",
+  "shoulders",
+  "shoulder",
+  "muscle",
+  "muscles",
+  "fat loss",
+  "weight loss",
+  "gain",
+  "bulk",
+  "cut",
+  "lean",
+  "metabolism",
+  "bmi",
 
-  "abs", "core", "biceps","tricep", "triceps", "legs","leg", "chest", "shoulders","shoulder", "muscle","muscles","fat loss", "weight loss", "gain", "bulk", "cut", "lean", "metabolism", "bmi",
+  "bodypump",
+  "crossfit",
+  "weight training",
+  "bootcamp",
+  "mind & body",
+  "yoga",
+  "pilates",
+  "stretching",
+  "dance",
+  "zumba",
+  "dance fitness",
+  "aerobics",
+  "cardio",
+  "endurance",
+  "spinning",
+  "hiit",
+  "circuit training",
+  "boxing",
+  "self defence",
 
-  "bodypump", "crossfit", "weight training", "bootcamp", "mind & body", "yoga", "pilates", 
-  "stretching", "dance", "zumba", "dance fitness", "aerobics",
-  "cardio", "endurance", "spinning", "hiit", "circuit training", "boxing", "self defence",
+  "nutrition",
+  "diet",
+  "protein",
+  "calories",
+  "fat",
+  "macros",
+  "supplements",
+  "hydration",
+  "creatine",
+  "creatine monohydrate",
 
-  "nutrition", "diet", "protein", "calories", "fat", "macros", "supplements", "hydration","creatine","creatine monohydrate",
-
-  "sleep", "rest day", "flexibility", "recovery","short","simple","words"
+  "sleep",
+  "rest day",
+  "flexibility",
+  "recovery",
+  "short",
+  "simple",
+  "words",
 ];
 
 logOutBtn.addEventListener("click", () => {
-  window.location.href = "../public/index.html";
+  window.location.href =
+    "https://adityaxletscode.github.io/GymVerse---Your-Personal-Gym-Trainer/index.html";
 });
 
 // ✅ Utility: Create user/AI chat box
@@ -41,23 +106,23 @@ async function generateResponse(aiChatBox) {
   const text = aiChatBox.querySelector(".ai-chat-area");
   const requestOption = {
     method: "POST",
-    headers: { 'Content-Type': 'application/json' },
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      contents: [{ parts: [{ text: user.data }] }]
-    })
+      contents: [{ parts: [{ text: user.data }] }],
+    }),
   };
 
   try {
     const response = await fetch(Api_Url, requestOption);
     const data = await response.json();
     const apiResponse = data.candidates[0].content.parts[0].text
-      .replace(/\*\*(.*?)\*\*/g, "$1")                   
-      .replace(/(\r\n|\r|\n)/g, '\n')                     
-      .replace(/(\n)?(\d+\.|\*|-)\s*/g, '\n$2 ')          
-      .replace(/\n{2,}/g, '\n')                           
+      .replace(/\*\*(.*?)\*\*/g, "$1")
+      .replace(/(\r\n|\r|\n)/g, "\n")
+      .replace(/(\n)?(\d+\.|\*|-)\s*/g, "\n$2 ")
+      .replace(/\n{2,}/g, "\n")
       .trim();
 
-    const formatted = apiResponse.replace(/\n/g, "<br>"); 
+    const formatted = apiResponse.replace(/\n/g, "<br>");
     text.innerHTML = formatted;
   } catch (e) {
     text.innerHTML = "Unable to get a response. Please try again later.";
@@ -71,7 +136,7 @@ function handleChatResponse(message) {
   user.data = message.trim();
   if (user.data === "") return;
 
-  const isFitnessRelated = fitnessKeywords.some(keyword =>
+  const isFitnessRelated = fitnessKeywords.some((keyword) =>
     user.data.toLowerCase().includes(keyword.toLowerCase())
   );
 
@@ -117,9 +182,9 @@ submit.addEventListener("click", () => {
   handleChatResponse(prompt.value);
 });
 
-const sidebar = document.querySelector('.left-container');
-const toggleBtn = document.querySelector('.sidebar-toggle');
+const sidebar = document.querySelector(".left-container");
+const toggleBtn = document.querySelector(".sidebar-toggle");
 
-toggleBtn.addEventListener('click', () => {
-  sidebar.classList.toggle('shrink');
+toggleBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("shrink");
 });
