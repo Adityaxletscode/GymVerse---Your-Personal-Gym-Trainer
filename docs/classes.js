@@ -9,8 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ✅ Safety check (prevents crashes)
   if (getStarted) {
     getStarted.addEventListener("click", function () {
-      window.location.href =
-        "https://adityaxletscode.github.io/GymVerse---Your-Personal-Gym-Trainer/docs/login-page/index.html";
+      window.location.href = "./login-page/index.html";
     });
   }
 
