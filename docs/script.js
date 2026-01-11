@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".right-container a");
 
   getStarted.addEventListener("click", function () {
-    window.location.href = "./login-page/index.html";
+    window.location.href =
+      "https://adityaxletscode.github.io/GymVerse/docs/login-page/index.html";
   });
 
   learnMore.addEventListener("click", function () {

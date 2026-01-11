@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // ✅ Safety check (prevents crashes)
   if (getStarted) {
     getStarted.addEventListener("click", function () {
-      window.location.href = "https://gymverse-backend-rz7f.onrender.com/";
+      window.location.href =
+        "https://adityaxletscode.github.io/GymVerse/docs/login-page/index.html";
     });
   }
 
