@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (getStarted) {
     getStarted.addEventListener("click", function () {
       window.location.href =
-        "https://adityaxletscode.github.io/GymVerse/docs/login-page/index.html";
+        "https://adityaxletscode.github.io/GymVerse---Your-Personal-Gym-Trainer/docs/login-page/index.html";
     });
   }
 
