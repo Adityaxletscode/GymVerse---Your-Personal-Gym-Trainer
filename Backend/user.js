@@ -31,7 +31,7 @@ router.post("/signin", (req, res) => {
   res.json({
     success: true,
     message: "Signin successful",
-    name: "User",
+    name: "Aditya", // replace later with DB value
   });
 });
 

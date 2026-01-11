@@ -1,41 +1,43 @@
-const logOutBtn = document.querySelector(".log-out");
-const welcome = document.querySelector(".welcome");
-const plan = document.querySelector(".card1");
-const chat = document.querySelector(".card2");
-const nutrition = document.querySelector(".card3");
+document.addEventListener("DOMContentLoaded", () => {
+  const logOutBtn = document.querySelector(".log-out");
+  const welcome = document.querySelector(".welcome");
+  const plan = document.querySelector(".card1");
+  const chat = document.querySelector(".card2");
+  const nutrition = document.querySelector(".card3");
+  const sidebar = document.querySelector(".left-container");
+  const toggleBtn = document.querySelector(".sidebar-toggle");
 
-logOutBtn.addEventListener("click", function () {
-  window.location.href = "./index.html";
-});
+  const params = new URLSearchParams(window.location.search);
+  const username = params.get("user");
 
-const params = new URLSearchParams(window.location.search);
-const username = params.get("user");
+  if (!username) {
+    window.location.href =
+      "https://adityaxletscode.github.io/GymVerse---Your-Personal-Gym-Trainer/login-page/index.html";
+    return;
+  }
 
-if (username) {
-  localStorage.setItem("username", username);
-}
+  welcome.innerHTML = `Welcome, ${username}!`;
 
-const storedUser = localStorage.getItem("username");
+  logOutBtn.addEventListener("click", () => {
+    window.location.href =
+      "https://adityaxletscode.github.io/GymVerse---Your-Personal-Gym-Trainer/index.html";
+  });
 
-if (storedUser) {
-  welcome.innerHTML = `Welcome, ${storedUser}!`;
-}
+  plan.addEventListener("click", () => {
+    window.location.href = `./plan.html?user=${encodeURIComponent(username)}`;
+  });
 
-plan.addEventListener("click", function () {
-  window.location.href = `./plan.html?user=${storedUser}`;
-});
+  chat.addEventListener("click", () => {
+    window.location.href = `./chat.html?user=${encodeURIComponent(username)}`;
+  });
 
-chat.addEventListener("click", function () {
-  window.location.href = `./chat.html?user=${storedUser}`;
-});
+  nutrition.addEventListener("click", () => {
+    window.location.href = `./nutrition.html?user=${encodeURIComponent(
+      username
+    )}`;
+  });
 
-nutrition.addEventListener("click", function () {
-  window.location.href = `./nutrition.html?user=${storedUser}`;
-});
-
-const sidebar = document.querySelector(".left-container");
-const toggleBtn = document.querySelector(".sidebar-toggle");
-
-toggleBtn.addEventListener("click", () => {
-  sidebar.classList.toggle("shrink");
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("shrink");
+  });
 });
