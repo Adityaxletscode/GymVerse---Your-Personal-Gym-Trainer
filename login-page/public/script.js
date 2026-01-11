@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const BACKEND_URL = "https://gymverse-backend-rz7f.onrender.com";
   const DASHBOARD_URL =
-    "https://adityaxletscode.github.io/GymVerse/dashboard-page/";
+    "https://adityaxletscode.github.io/GymVerse/docs/dashboard-page/index.html";
 
   signInBtn.addEventListener("click", () => {
     nameField.style.maxHeight = "0";
