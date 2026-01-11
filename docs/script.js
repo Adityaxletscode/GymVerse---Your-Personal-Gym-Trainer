@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelectorAll(".right-container a");
 
   getStarted.addEventListener("click", function () {
-    window.location.href = "https://gymverse-backend-rz7f.onrender.com/";
+    window.location.href = "./login-page/index.html";
   });
 
   learnMore.addEventListener("click", function () {
