@@ -254,3 +254,90 @@ a.active {
     font-size: 16px;
     font-weight: bold;
 }
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .card {
+        flex: 0 0 calc(50% - 40px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .left-container {
+        justify-content: center;
+        margin-top: 20px;
+        gap: 20px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .card {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 500px;
+        margin-bottom: 30px;
+    }
+
+    .card.left {
+         border-right: 1px solid #ffcc00;
+         border-radius: 12px;
+    }
+
+    .card.right {
+         border-left: 1px solid #ffcc00;
+         border-radius: 12px;
+    }
+
+    /* Adjust absolute positioning for the right contact card on mobile */
+    .mail, .phone, .location, .fb, .insta, .x {
+        left: 20px; 
+    }
+    
+    .info, .phoneNo, .address {
+        left: 60px;
+        text-align: left;
+    }
+
+    .fb { left: 30%; transform: translateX(-50%); }
+    .insta { left: 50%; transform: translateX(-50%); }
+    .x { left: 70%; transform: translateX(-50%); }
+}
+
+@media screen and (max-width: 480px) {
+    .left-container {
+        gap: 15px;
+        font-size: 14px;
+    }
+
+    .heading h1 {
+        font-size: 24px;
+    }
+    
+    .subHeading span {
+        font-size: 16px;
+        padding: 0 10px;
+        display: block;
+    }
+    
+    .card {
+        height: auto;
+        min-height: 520px;
+    }
+    
+    /* Further adjustment for social icons */
+    .fb { left: 25%; }
+    .insta { left: 50%; }
+    .x { left: 75%; }
+}

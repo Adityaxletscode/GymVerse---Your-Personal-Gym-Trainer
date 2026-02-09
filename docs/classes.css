@@ -207,3 +207,60 @@ a.active {
   font-size: 16px;
   font-weight: bold;
 }
+/* Media Queries */
+@media screen and (max-width: 900px) {
+  .card {
+     flex: 0 0 calc(50% - 30px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .left-container {
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .get-started {
+    display: none; /* Hide if not needed or style appropriately */
+  }
+
+  .mid-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .mid-container button {
+    width: 100px;
+    font-size: 14px;
+  }
+  
+  .card {
+    flex: 0 0 100%;
+  }
+
+  .heading {
+    margin-top: 20px;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .left-container {
+    gap: 15px;
+    font-size: 14px;
+  }
+  
+  .mid-container button {
+     width: 80px;
+     font-size: 12px;
+  }
+}

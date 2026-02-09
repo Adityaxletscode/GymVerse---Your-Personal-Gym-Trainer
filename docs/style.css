@@ -6,6 +6,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 body::before {
@@ -14,32 +15,48 @@ body::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-image: url("./images/Gym.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   filter: brightness(0.5);
-  z-index: 0;
-}
-
-body > * {
-  position: relative;
-  z-index: 1;
+  z-index: -1;
 }
 
 .main-container {
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px 20px 10px;
+  align-items: center;
+  padding: 20px 40px;
   color: white;
+  position: relative;
+  z-index: 10;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.title svg {
+  fill: #ffcc00;
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.last-name {
+  color: #ffcc00;
 }
 
 .right-container {
-  flex: 1;
   display: flex;
-  justify-content: flex-end;
-  gap: 50px;
+  gap: 30px;
 }
 
 a {
@@ -47,110 +64,85 @@ a {
   color: white;
   font-weight: 500;
   transition: color 0.3s ease;
+  font-size: 16px;
 }
 
 a:hover {
   color: #ffcc00;
 }
 
-.title {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  color: white;
-  font-size: 40px;
-  font-weight: 500;
-  margin-top: -10px;
-}
-
-.title svg {
-  fill: #ffcc00;
-  width: 80px;
-  height: auto;
-  margin-top: -20px;
-}
-
-.last-name {
-  color: #ffcc00;
-}
-
+/* Hero Section Refactoring */
 .middle-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  text-align: center;
   color: white;
+  margin-top: 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.first-txt, .second-txt {
+  position: static;
   font-size: 60px;
   font-weight: 500;
-}
-
-.first-txt {
-  position: absolute;
-  top: 50px;
-}
-
-.second-txt {
-  position: absolute;
-  top: 120px;
+  line-height: 1.2;
 }
 
 .last-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   color: white;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.goal1, .goal2 {
+  position: static;
   font-size: 25px;
-}
-
-.goal1 {
-  position: absolute;
-  top: 130px;
-}
-
-.goal2 {
-  position: absolute;
-  top: 165px;
+  line-height: 1.5;
 }
 
 .btn {
   display: flex;
   justify-content: center;
-  position: absolute;
-  top: 420px;
-  left: 0;
-  right: 0;
-  margin: auto;
   gap: 15px;
+  margin-top: 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.get-started, .learn-more {
+  width: 150px;
+  height: 50px;
+  font-size: large;
+  font-weight: bold;
+  border-radius: 5px;
+  border: 2px solid white;
+  outline: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .get-started {
   color: white;
   background-color: #ffcc00;
-  font-size: large;
-  font-weight: bold;
-  width: 150px;
-  height: 50px;
-  border-radius: 5px;
-  border: 2px solid white;
-  outline: 0;
-  cursor: pointer;
-  transition: color 0.3s ease;
 }
 
 .learn-more {
   color: white;
   background-color: black;
-  font-size: large;
-  font-weight: bold;
-  width: 150px;
-  height: 50px;
-  border-radius: 5px;
-  border: 2px solid white;
-  outline: 0;
-  cursor: pointer;
-  transition: color 0.3s ease;
 }
 
 .get-started:hover {
   color: #002244;
-  border-color: black;
+  background: white;
+  border-color: #ffcc00;
 }
 
 .learn-more:hover {
@@ -158,15 +150,74 @@ a:hover {
   border-color: #ffa500;
 }
 
-a.active {
-  color: #ffcc00;
-  font-size: 16px;
-  font-weight: bold;
-}
-
 .footer {
   position: absolute;
   bottom: 10px;
-  right: 20px;
+  text-align: center;
+  width: 100%;
   color: white;
+  z-index: 1;
 }
+
+/* Media Queries */
+@media screen and (max-width: 900px) {
+  .first-txt, .second-txt {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .right-container {
+    margin-top: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .first-txt, .second-txt {
+    font-size: 36px;
+  }
+
+  .goal1, .goal2 {
+    font-size: 18px;
+    padding: 0 10px;
+  }
+
+  .btn {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .right-container {
+    gap: 15px;
+    font-size: 14px;
+  }
+  
+  .title svg {
+    width: 50px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .first-txt, .second-txt {
+    font-size: 28px;
+  }
+
+  .goal1, .goal2 {
+    font-size: 16px;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+}
+
