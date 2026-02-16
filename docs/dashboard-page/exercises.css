@@ -12,6 +12,8 @@ body {
     position: relative;
     font-family: 'Poppins', sans-serif;
     background-color: #0b0b0b;
+    overflow: hidden;
+    height: 100vh;
 }
 
 body::before {
@@ -44,34 +46,37 @@ a{
   align-items: center;
   position: fixed;         
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;           
-  background-color: #0b0b0b;
-  z-index: 10;            
+  left: 80px;
+  width: calc(100% - 80px);
+  height: 60px;           
+  background-color: transparent;
+  pointer-events: none;
+  z-index: 30;            
   padding: 0 20px;
 }
 
-.heading svg{
-    position: absolute;
-    fill: #ffcc00;
-    top: 0px;
-    width: 120px;
-    height: 90px;
-    left: 0px;
+.header > * {
+  pointer-events: auto;
 }
+
+
 
 .heading h1{
     position: absolute;
-    left: 100px; /* shifts it right */
-    top: 22px;  /* shifts it down */
+    left: 0; 
+    top: 10px; 
     color: white;
-    font-size: 40px;
-    z-index: 2; /* above background overlay */
+    font-size: 28px;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+}
+
+body.sidebar-expanded .heading h1 {
+    opacity: 0;
 }
 
 .first{
-    font-size: 50px;
+    font-size: 35px;
 }
 
 .last {
@@ -79,18 +84,18 @@ a{
 }
 
 .second{
-    font-size: 50px;
+    font-size: 35px;
 }
 
 .log-out{
     flex-basis: 10%;
     background-color: black;
     color: #ffcc00; 
-    font-size: large;
+    font-size: 14px;
     font-weight: 500; 
-    width: 100px;
-    height: 40px;
-    margin: 20px 20px;
+    width: 80px;
+    height: 35px;
+    margin: 10px 20px;
     border-radius: 10px;
     border: 2px solid #ffcc00;
     outline: 0;
@@ -110,47 +115,89 @@ a{
 
 .left-container {
   position: fixed;
-  top: 100px; 
+  top: 0; 
   left: 0;
-  bottom: 0;
-  width: 330px;
+  height: 100vh;
+  width: 80px;
   background-color: white;
   border: 2px solid grey;
   border-left: none;
-  z-index: 1;
+  z-index: 40;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: none;
-  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 10px;
+  transition: width 0.3s ease;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px;
+  gap: 15px;
+  color: black;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  border-bottom: 2px solid whitesmoke;
+  margin-bottom: 10px;
+}
+
+.user-profile svg {
+  width: 30px;
+  height: 30px;
+  min-width: 30px;
+  fill: black;
+}
+
+.user-profile span {
+  display: none;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.left-container:hover .user-profile span {
+  display: inline;
+}
+
+.left-container:hover {
+  width: 260px;
 }
 
 .right-container {
-  margin-left: 330px;
-  margin-top: 110px;
-  min-height: 100vh;
+  margin-left: 80px;
+  margin-top: 60px;
+  height: calc(100vh - 110px);
+  overflow-y: auto;
   background-color: transparent;
-  width: calc(100% - 330px);
-}
-
-.left-container svg{
-    position: absolute;
-    top: 0px;
-    left: 20px;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 100px;
+  width: calc(100% - 80px);
+  padding: 0 40px 20px 40px;
+  scrollbar-width: thin;
 }
 
 .sidebar-option {
   display: flex;
   align-items: center;
-  padding: 15px 20px;
+  padding: 10px 20px;
   gap: 15px;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   color: black;
   cursor: pointer;
   transition: background 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.sidebar-option span {
+  display: none;
+}
+
+.left-container:hover .sidebar-option span {
+  display: inline;
 }
 
 .sidebar-option:hover {
@@ -164,13 +211,14 @@ a{
   transform: none;
   top: 0;
   left: 0;
+  min-width: 24px;
 }
 
 .right-container h1{
     color: white;
     text-align: center;
     font-weight: bold;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .btn-container{
@@ -183,10 +231,10 @@ a{
 .btn-container button{
     background-color: black;
     color: #ffcc00; 
-    font-size: large;
+    font-size: 14px;
     font-weight: 500; 
-    width: 120px;
-    height: 40px;
+    width: 100px;
+    height: 35px;
     outline: 0;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -200,7 +248,7 @@ a{
 .btn-container button.active {
     background-color: #ffcc00;
     color: black;
-    font-size: large;
+    font-size: 14px;
     border: 2px solid white;
 }
 
@@ -240,15 +288,15 @@ a{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .card{
     position: relative;
-    flex: 0 0 calc(50% - 30px);
-    height: 350px;
+    flex: 0 0 calc(50% - 20px);
+    height: 280px;
     background-color: whitesmoke;
     border: 1px solid #ffcc00;
     border-radius: 12px;
@@ -268,70 +316,30 @@ a{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    top: 20px;
+    height: 120px;
+    width: auto;
 }
 
 .card h3{
-    margin-top: 20px;
-    font-size: 25px;
+    margin-top: 150px;
+    font-size: 20px;
 }
 
 .card span {
   position: absolute;
-  top: 215px;
+  top: 180px;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;            
   text-align: center;
-  font-size: 17px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 1.4;
   word-wrap: break-word;  
 }
 
 .sidebar-toggle {
-  position: absolute;
-  top: 5px;
-  right: -12px;
-  transform: translateX(-50%);
-  width: 30px;
-  height: 30px;
-  background-color: gainsboro;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  transition: transform 0.3s ease;
-}
-
-
-
-.left-container.shrink {
-  width: 80px;
-}
-
-.left-container.shrink .sidebar-option span {
   display: none;
-}
-
-.left-container.shrink .sidebar-option {
-  justify-content: center;
-  padding: 15px 0;
-}
-
-.left-container.shrink .sidebar-option svg {
-  margin: 0;
-}
-
-.left-container.shrink ~ .right-container {
-  width: calc(100% - 80px);
-  margin-left: 80px;
-}
-
-.left-container.shrink .arrow {
-  transform: rotate(180deg);
 }
 
 .left-container,
@@ -351,10 +359,13 @@ a{
     position: fixed;
     bottom: 0px;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #0b0b0b;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
-    font-size: 14px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 1000;
+    border-top: 1px solid #333;
 }

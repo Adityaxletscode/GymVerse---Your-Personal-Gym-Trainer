@@ -1,3 +1,15 @@
+const params = new URLSearchParams(window.location.search);
+let username = params.get("user");
+
+if (!username) {
+  username = localStorage.getItem("username");
+}
+
+const userNameSpan = document.querySelector(".user-name-span");
+if (userNameSpan && username) {
+  userNameSpan.textContent = username;
+}
+
 const logOutBtn = document.querySelector(".log-out");
 const inputField = document.querySelector(".input-wrapper input");
 
@@ -50,3 +62,19 @@ const toggleBtn = document.querySelector(".sidebar-toggle");
 toggleBtn.addEventListener("click", () => {
   sidebar.classList.toggle("shrink");
 });
+
+if (sidebar) {
+  sidebar.addEventListener("mouseenter", () => {
+    const headingH1 = document.querySelector(".heading h1");
+    if (headingH1) {
+      headingH1.style.opacity = "0";
+      headingH1.style.transition = "opacity 0.3s ease";
+    }
+  });
+  sidebar.addEventListener("mouseleave", () => {
+    const headingH1 = document.querySelector(".heading h1");
+    if (headingH1) {
+      headingH1.style.opacity = "1";
+    }
+  });
+}

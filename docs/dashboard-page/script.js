@@ -21,6 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   welcome.innerHTML = `Welcome, ${username}!`;
+  
+  const userNameSpan = document.querySelector(".user-name-span");
+  if (userNameSpan) {
+    userNameSpan.textContent = username;
+  }
 
   logOutBtn.addEventListener("click", () => {
     window.location.href = "../index.html";
@@ -44,4 +49,19 @@ document.addEventListener("DOMContentLoaded", () => {
     sidebar.classList.toggle("shrink");
     document.querySelector('.header').classList.toggle('shrink');
   });
+  if (sidebar) {
+    sidebar.addEventListener("mouseenter", () => {
+      const headingH1 = document.querySelector(".heading h1");
+      if (headingH1) {
+        headingH1.style.opacity = "0";
+        headingH1.style.transition = "opacity 0.3s ease";
+      }
+    });
+    sidebar.addEventListener("mouseleave", () => {
+      const headingH1 = document.querySelector(".heading h1");
+      if (headingH1) {
+        headingH1.style.opacity = "1";
+      }
+    });
+  }
 });
