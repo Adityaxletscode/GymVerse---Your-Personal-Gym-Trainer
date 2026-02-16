@@ -3,8 +3,7 @@ const buttons = document.querySelectorAll(".btn-container button");
 const cards = document.querySelectorAll(".card");
 
 logOutBtn.addEventListener("click", function () {
-  window.location.href =
-    "https://adityaxletscode.github.io/GymVerse---Your-Personal-Gym-Trainer/index.html";
+  window.location.href = "../index.html";
 });
 
 buttons.forEach((button) => {

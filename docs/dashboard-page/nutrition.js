@@ -2,8 +2,7 @@ const logOutBtn = document.querySelector(".log-out");
 const inputField = document.querySelector(".input-wrapper input");
 
 logOutBtn.addEventListener("click", function () {
-  window.location.href =
-    "https://adityaxletscode.github.io/GymVerse---Your-Personal-Gym-Trainer/index.html";
+  window.location.href = "../index.html";
 });
 
 inputField.addEventListener("keydown", function (event) {

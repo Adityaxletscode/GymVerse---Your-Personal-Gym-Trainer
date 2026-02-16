@@ -118,3 +118,14 @@ button.disable{
     cursor: pointer;
     font-size: 16px;
 }
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  color: white;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px 0;
+}

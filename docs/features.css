@@ -31,13 +31,36 @@ body > * {
 .main-container {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  align-items: center;
+  padding: 20px 40px;
   color: white;
+  position: relative;
+  z-index: 10;
 }
-.left-container {
-  flex: 1;
+/* Navbar Styles */
+.title {
   display: flex;
-  gap: 50px;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.title svg {
+  fill: #ffcc00;
+  width: 60px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.last-name {
+  color: #ffcc00;
+}
+
+.right-container {
+  display: flex;
+  gap: 30px;
 }
 
 a {
@@ -178,4 +201,14 @@ a.active {
     gap: 15px;
     font-size: 14px;
   }
+}
+
+.footer {
+  text-align: center;
+  width: 100%;
+  color: white;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px 0;
+  margin-top: 20px;
 }

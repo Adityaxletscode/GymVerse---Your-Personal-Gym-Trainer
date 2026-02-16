@@ -7,8 +7,7 @@ const arms = document.querySelector(".arms");
 const core = document.querySelector(".core");
 
 logOutBtn.addEventListener("click", function () {
-  window.location.href =
-    "https://adityaxletscode.github.io/GymVerse---Your-Personal-Gym-Trainer/index.html";
+  window.location.href = "../index.html";
 });
 
 chest.addEventListener("click", function () {
@@ -40,4 +39,5 @@ const toggleBtn = document.querySelector(".sidebar-toggle");
 
 toggleBtn.addEventListener("click", () => {
   sidebar.classList.toggle("shrink");
+  document.querySelector('.header').classList.toggle('shrink');
 });

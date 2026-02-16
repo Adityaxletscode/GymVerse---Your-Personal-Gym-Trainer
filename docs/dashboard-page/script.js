@@ -8,19 +8,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleBtn = document.querySelector(".sidebar-toggle");
 
   const params = new URLSearchParams(window.location.search);
-  const username = params.get("user");
+  let username = params.get("user");
+
+  if (!username) {
+    username = localStorage.getItem("username");
+  }
 
   if (!username) {
     window.location.href =
-      "https://adityaxletscode.github.io/GymVerse---Your-Personal-Gym-Trainer/login-page/index.html";
+      "../login-page/index.html";
     return;
   }
 
   welcome.innerHTML = `Welcome, ${username}!`;
 
   logOutBtn.addEventListener("click", () => {
-    window.location.href =
-      "https://adityaxletscode.github.io/GymVerse---Your-Personal-Gym-Trainer/index.html";
+    window.location.href = "../index.html";
   });
 
   plan.addEventListener("click", () => {
@@ -39,5 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   toggleBtn.addEventListener("click", () => {
     sidebar.classList.toggle("shrink");
+    document.querySelector('.header').classList.toggle('shrink');
   });
 });

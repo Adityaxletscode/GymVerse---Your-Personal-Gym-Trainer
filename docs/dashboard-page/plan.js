@@ -28,8 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   usernameSpan.textContent = storedUser || "Guest";
 
   logOutBtn.addEventListener("click", function () {
-    window.location.href =
-      "https://adityaxletscode.github.io/GymVerse---Your-Personal-Gym-Trainer/index.html";
+    window.location.href = "../index.html";
   });
 
   const genderSelect = document.getElementById("gender");

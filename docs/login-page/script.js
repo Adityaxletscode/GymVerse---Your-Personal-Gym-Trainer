@@ -20,26 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!signUpBtn || !signInBtn) return;
 
   const BACKEND_URL = "https://gymverse-backend-rz7f.onrender.com";
-  const DASHBOARD_URL =
-    "https://adityaxletscode.github.io/GymVerse---Your-Personal-Gym-Trainer/dashboard-page/index.html";
+  const DASHBOARD_URL = "../dashboard-page/index.html";
 
-  signInBtn.addEventListener("click", () => {
-    nameField.style.maxHeight = "0";
-    title.innerHTML = "Sign In";
-    text.innerHTML = "Lost Password";
-    signUpBtn.classList.add("disable");
-    signInBtn.classList.remove("disable");
-    underline.style.transform = "translateX(35px)";
-  });
 
-  signUpBtn.addEventListener("click", () => {
-    nameField.style.maxHeight = "60px";
-    title.innerHTML = "Sign Up";
-    text.innerHTML = "Password Suggestions";
-    signUpBtn.classList.remove("disable");
-    signInBtn.classList.add("disable");
-    underline.style.transform = "translateX(0)";
-  });
 
   clickLink.addEventListener("click", (e) => {
     e.preventDefault();
@@ -76,10 +59,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   signUpBtn.addEventListener("click", async () => {
-    if (title.innerHTML === "Sign Up") {
+    if (title.innerHTML === "Sign In") {
+      nameField.style.maxHeight = "60px";
+      title.innerHTML = "Sign Up";
+      text.innerHTML = "Password Suggestions";
+      signUpBtn.classList.remove("disable");
+      signInBtn.classList.add("disable");
+      underline.style.transform = "translateX(0)";
+    } else {
       const name = document.querySelector(".namefield input").value;
       const email = document.querySelector('input[type="email"]').value;
       const password = document.querySelector('input[type="password"]').value;
+
+      const originalText = signUpBtn.innerText;
+      signUpBtn.innerText = "Signing Up...";
+      signUpBtn.disabled = true;
 
       try {
         const res = await fetch(`${BACKEND_URL}/signup`, {
@@ -99,16 +93,30 @@ document.addEventListener("DOMContentLoaded", () => {
           alert(data.message || "Sign-up failed");
         }
       } catch (err) {
-        alert("Error signing up.");
+        alert("Error signing up. Please try again.");
         console.error(err);
+      } finally {
+        signUpBtn.innerText = originalText;
+        signUpBtn.disabled = false;
       }
     }
   });
 
   signInBtn.addEventListener("click", async () => {
-    if (title.innerHTML === "Sign In") {
+    if (title.innerHTML === "Sign Up") {
+      nameField.style.maxHeight = "0";
+      title.innerHTML = "Sign In";
+      text.innerHTML = "Lost Password";
+      signUpBtn.classList.add("disable");
+      signInBtn.classList.remove("disable");
+      underline.style.transform = "translateX(35px)";
+    } else {
       const email = document.querySelector('input[type="email"]').value;
       const password = document.querySelector('input[type="password"]').value;
+
+      const originalText = signInBtn.innerText;
+      signInBtn.innerText = "Signing In...";
+      signInBtn.disabled = true;
 
       try {
         const res = await fetch(`${BACKEND_URL}/signin`, {
@@ -128,8 +136,11 @@ document.addEventListener("DOMContentLoaded", () => {
           alert(data.message || "Invalid credentials");
         }
       } catch (err) {
-        alert("Error signing in.");
+        alert("Error signing in. Please check your connection.");
         console.error(err);
+      } finally {
+        signInBtn.innerText = originalText;
+        signInBtn.disabled = false;
       }
     }
   });

@@ -538,6 +538,15 @@ a{
   display: none;
 }
 
+.left-container.shrink .sidebar-option {
+  justify-content: center;
+  padding: 15px 0;
+}
+
+.left-container.shrink .sidebar-option svg {
+  margin: 0;
+}
+
 .left-container.shrink ~ .right-container {
   width: calc(100% - 80px);
   margin-left: 80px;
@@ -558,6 +567,18 @@ a{
 
 .welcome {
   text-align: center;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    z-index: 1000;
 }
 
 
