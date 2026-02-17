@@ -344,3 +344,49 @@ body.sidebar-expanded .heading h1 {
     z-index: 1000;
     border-top: 1px solid #333;
 }
+
+@media screen and (max-width: 768px) {
+  body::before {
+    background-attachment: scroll;
+    background-position: center;
+  }
+  
+  .left-container {
+      width: 60px;
+  }
+
+  .left-container:hover {
+      width: 60px;
+  }
+
+  .user-profile span, .sidebar-option span {
+      display: none !important;
+  }
+
+  .right-container {
+      margin-left: 60px;
+      width: calc(100% - 60px);
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+
+  .header {
+      left: 60px;
+      width: calc(100% - 60px);
+  }
+
+  .heading h1 {
+      font-size: 20px;
+      top: 15px;
+  }
+
+  .card {
+     flex: 0 0 calc(100% - 20px);
+     max-width: 500px;
+  }
+  
+  .first, .second {
+      font-size: 24px;
+  }
+}
+

@@ -335,6 +335,11 @@ a.active {
     .fb { left: 30%; transform: translateX(-50%); }
     .insta { left: 50%; transform: translateX(-50%); }
     .x { left: 70%; transform: translateX(-50%); }
+
+    body::before {
+        background-attachment: scroll;
+        background-position: center;
+    }
 }
 
 @media screen and (max-width: 480px) {

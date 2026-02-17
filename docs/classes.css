@@ -274,6 +274,11 @@ a.active {
     margin-top: 20px;
     padding: 0 15px;
   }
+
+  body::before {
+    background-attachment: scroll;
+    background-position: center;
+  }
 }
 
 @media screen and (max-width: 480px) {
