@@ -46,7 +46,7 @@ router.post("/signup", async (req, res) => {
     console.error("Signup error:", err);
     res.status(500).json({
       success: false,
-      message: "Internal server error during signup",
+      message: `Database Error: ${err.message}`, // Return actual error to help debugging
     });
   }
 });
@@ -90,10 +90,11 @@ router.post("/signin", async (req, res) => {
     console.error("Signin error:", err);
     res.status(500).json({
       success: false,
-      message: "Internal server error during signin",
+      message: `Database Error: ${err.message}`, // Return actual error to help debugging
     });
   }
 });
+
 
 module.exports = router;
 
