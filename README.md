@@ -1,10 +1,5 @@
 # 🏋️ GymVerse – Your Personal Gym Trainer
 
-🔗 **Live Deployment:**  
-https://adityaxletscode.github.io/GymVerse---Your-Personal-Gym-Trainer/
-
----
-
 ## 📌 About GymVerse
 
 **GymVerse** is a comprehensive **fitness-focused web application** designed to act as a personal gym companion.  
