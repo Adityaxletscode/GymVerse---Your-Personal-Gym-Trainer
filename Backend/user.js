@@ -41,6 +41,7 @@ router.post("/signup", async (req, res) => {
       success: true,
       message: "Signup successful",
       name: newUser.name,
+      email: newUser.email,
     });
   } catch (err) {
     console.error("Signup error:", err);
@@ -85,6 +86,7 @@ router.post("/signin", async (req, res) => {
       success: true,
       message: "Signin successful",
       name: user.name,
+      email: user.email,
     });
   } catch (err) {
     console.error("Signin error:", err);

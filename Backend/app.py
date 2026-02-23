@@ -71,6 +71,17 @@ def get_history(user_id):
 
     return history
 
+@app.get("/history/{user_id}")
+def get_chat_history(user_id: str):
+    chats = collection.find({"user_id": user_id}).sort("timestamp", 1)
+    history = []
+    for chat in chats:
+        history.append({
+            "role": chat["role"],
+            "message": chat["message"]
+        })
+    return {"history": history}
+
 @app.get("/")
 def home():
     return {"message": "Welcome to the GymVerse Bot API!"}

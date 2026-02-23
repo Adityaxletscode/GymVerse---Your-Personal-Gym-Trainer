@@ -132,6 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (res.ok && data.success) {
         alert(data.message);
         localStorage.setItem("username", data.name);
+        localStorage.setItem("useremail", data.email);
         window.location.href = DASHBOARD_URL + "?user=" + encodeURIComponent(data.name);
       } else {
         alert(data.message || "Action failed. Please try again.");
