@@ -3,8 +3,7 @@ const prompt = document.getElementById("prompt");
 const chatBody = document.querySelector(".chat-body");
 const submit = document.getElementById("submit");
 
-const Api_Url =
-  "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AIzaSyCQYz-s9O8tHJJu9yJwRNZTV7W-I2hNezg";
+const Api_Url = "http://127.0.0.1:8000/chat";
 
 const user = { data: null };
 
@@ -39,15 +38,8 @@ async function generateResponse(aiChatBox) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      contents: [
-        {
-          parts: [
-            {
-              text: `You are a professional gym trainer and nutritionist. Answer the following question: "${user.data}". If the question is not related to fitness, gym, health, or nutrition, politely decline to answer.`,
-            },
-          ],
-        },
-      ],
+      question: user.data,
+      user_id: username || "anonymous"
     }),
   };
 
@@ -56,22 +48,15 @@ async function generateResponse(aiChatBox) {
     const data = await response.json();
 
     if (!response.ok) {
-      throw new Error(data.error?.message || "API Request Failed");
+      throw new Error(data.detail || "API Request Failed");
     }
 
-    const apiResponse = data.candidates[0].content.parts[0].text
-      .replace(/\*\*(.*?)\*\*/g, "$1")
-      .replace(/(\r\n|\r|\n)/g, "\n")
-      .replace(/(\n)?(\d+\.|\*|-)\s*/g, "\n$2 ")
-      .replace(/\n{2,}/g, "\n")
-      .trim();
-
+    const apiResponse = data.response;
     const formatted = apiResponse.replace(/\n/g, "<br>");
     text.innerHTML = formatted;
   } catch (e) {
     text.innerHTML = "Error: " + e.message;
     console.error(e);
-    alert("Chat Error: " + e.message);
   } finally {
     chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: "smooth" });
   }
