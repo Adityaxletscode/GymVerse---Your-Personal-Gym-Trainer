@@ -41,7 +41,7 @@ window.onload = async () => {
         } else {
           const aiHTML = `
             <svg width="800px" height="800px" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{stroke:#020202;stroke-miterlimit:10;stroke-width:1.91px;}</style></defs><path class="cls-1" d="M10.09,1.5h3.83a2.87,2.87,0,0,1,2.87,2.87V9.15A4.78,4.78,0,0,1,12,13.93h0A4.78,4.78,0,0,1,7.22,9.15V4.37A2.87,2.87,0,0,1,10.09,1.5Z"/><path class="cls-1" d="M7.22,5.33h9.57a0,0,0,0,1,0,0v0A2.87,2.87,0,0,1,13.91,8.2H10.09A2.87,2.87,0,0,1,7.22,5.33v0A0,0,0,0,1,7.22,5.33Z"/><path class="cls-1" d="M3.39,23.5v-1A8.62,8.62,0,0,1,12,13.93h0a8.62,8.62,0,0,1,8.61,8.61v1"/><circle class="cls-1" cx="12" cy="20.63" r="0.96"/><line class="cls-1" x1="12.96" y1="23.5" x2="12.96" y2="20.63"/><polyline class="cls-1" points="7.22 13.94 12 19.67 16.78 13.94"/></svg>
-            <div class="ai-chat-area">${chat.message.replace(/\n/g, "<br>")}</div>
+            <div class="ai-chat-area">${chat.message.replace(/\*\*/g, "").replace(/\n/g, "<br>")}</div>
           `;
           const aiChatBox = createChatBox(aiHTML, "ai-chat-box");
           chatBody.appendChild(aiChatBox);
@@ -88,7 +88,8 @@ async function generateResponse(aiChatBox) {
     }
 
     const apiResponse = data.response;
-    const formatted = apiResponse.replace(/\n/g, "<br>");
+    const cleanResponse = apiResponse.replace(/\*\*/g, ""); // Remove bolding **
+    const formatted = cleanResponse.replace(/\n/g, "<br>");
     text.innerHTML = formatted;
   } catch (e) {
     text.innerHTML = "Error: " + e.message;
@@ -118,7 +119,7 @@ function handleChatResponse(message) {
   setTimeout(() => {
     const loadingHTML = `
       <svg width="800px" height="800px" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"><defs><style>.cls-1{stroke:#020202;stroke-miterlimit:10;stroke-width:1.91px;}</style></defs><path class="cls-1" d="M10.09,1.5h3.83a2.87,2.87,0,0,1,2.87,2.87V9.15A4.78,4.78,0,0,1,12,13.93h0A4.78,4.78,0,0,1,7.22,9.15V4.37A2.87,2.87,0,0,1,10.09,1.5Z"/><path class="cls-1" d="M7.22,5.33h9.57a0,0,0,0,1,0,0v0A2.87,2.87,0,0,1,13.91,8.2H10.09A2.87,2.87,0,0,1,7.22,5.33v0A0,0,0,0,1,7.22,5.33Z"/><path class="cls-1" d="M3.39,23.5v-1A8.62,8.62,0,0,1,12,13.93h0a8.62,8.62,0,0,1,8.61,8.61v1"/><circle class="cls-1" cx="12" cy="20.63" r="0.96"/><line class="cls-1" x1="12.96" y1="23.5" x2="12.96" y2="20.63"/><polyline class="cls-1" points="7.22 13.94 12 19.67 16.78 13.94"/></svg>
-      <div class="ai-chat-area"><img src="../images/Loading_icon.gif" alt="Loading..." class="load"></div>
+      <div class="ai-chat-area"><img src="../images/Loading_icon.gif" alt="" class="load"></div>
     `;
     const aiChatBox = createChatBox(loadingHTML, "ai-chat-box");
     chatBody.appendChild(aiChatBox);
