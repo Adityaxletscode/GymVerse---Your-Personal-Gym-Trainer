@@ -15,8 +15,8 @@ app.use(
 app.use(express.json());
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGODB_URI)
-  .then(() => console.log("Connected to MongoDB"))
+mongoose.connect(process.env.MONGODB_URI_LOGIN)
+  .then(() => console.log("Connected to MongoDB (Login)"))
   .catch((err) => console.error("Could not connect to MongoDB:", err));
 
 const userRoutes = require("./user");
