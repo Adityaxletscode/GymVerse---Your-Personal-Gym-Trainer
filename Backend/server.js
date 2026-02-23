@@ -23,8 +23,10 @@ const userRoutes = require("./user");
 app.use("/", userRoutes);
 
 app.get("/", (req, res) => {
-  res.send("Backend is running");
+  const status = mongoose.connection.readyState === 1 ? "Connected" : "Disconnected";
+  res.send(`Backend is running. Database status: ${status}`);
 });
+
 
 const PORT = process.env.PORT || 5000;
 
