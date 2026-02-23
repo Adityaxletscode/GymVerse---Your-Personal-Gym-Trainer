@@ -3,7 +3,7 @@ const prompt = document.getElementById("prompt");
 const chatBody = document.querySelector(".chat-body");
 const submit = document.getElementById("submit");
 
-const Api_Url = "http://127.0.0.1:8000/chat";
+const Api_Url = "http://localhost:8000/chat";
 
 const user = { data: null };
 
@@ -22,11 +22,20 @@ if (userNameSpan && username) {
 
 // ✅ Load History on startup
 window.onload = async () => {
-  if (!useremail) return;
+  console.log("Chat window loaded, fetching history for:", useremail);
+  if (!useremail) {
+    console.warn("No useremail found in localStorage. History will not be loaded.");
+    return;
+  }
+  
   try {
-    const res = await fetch(`http://127.0.0.1:8000/history/${useremail}`);
+    const res = await fetch(`http://localhost:8000/history/${useremail}`);
+    if (!res.ok) throw new Error("Failed to fetch history");
+    
     const data = await res.json();
-    if (data.history) {
+    console.log("History data received:", data);
+    
+    if (data.history && data.history.length > 0) {
       data.history.forEach(chat => {
         if (chat.role === "user") {
           const userHTML = `
