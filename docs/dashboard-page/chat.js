@@ -75,7 +75,8 @@ async function generateResponse(aiChatBox) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       question: user.data,
-      user_id: useremail || username || "anonymous"
+      user_id: useremail || username || "anonymous",
+      user_name: username || "Guest"
     }),
   };
 

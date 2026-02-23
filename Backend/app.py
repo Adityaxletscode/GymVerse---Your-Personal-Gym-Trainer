@@ -30,6 +30,7 @@ app=FastAPI()
 class ChatRequest(BaseModel):
     question: str
     user_id: str
+    user_name: str = "Guest"
 
 app.add_middleware(
     CORSMiddleware,
@@ -43,12 +44,12 @@ app.add_middleware(
 prompt = ChatPromptTemplate.from_messages([
     ("system",
      "You are a Diet, Fitness, Health, and Gym bot. "
+     "The user's name is {user_name}. Use it when appropriate. "
      "IMPORTANT: Respond only in clear, plain text. "
      "Do NOT use markdown tables. "
      "Do NOT use double asterisks (**) for bolding. "
      "Do NOT use hash symbols (###) for headers. "
-     "Use simple bullet points (• or -) for lists. "
-     "If the user shares personal info like name, remember it and use it naturally."),
+     "Use simple bullet points (• or -) for lists."),
     MessagesPlaceholder(variable_name="history"),
     ("human", "{question}")
 ])
@@ -97,12 +98,14 @@ def chat(request: ChatRequest):
 
     response = chain.invoke({
         "history": history,
-        "question": request.question
+        "question": request.question,
+        "user_name": request.user_name
     })
 
     # Save user msg
     collection.insert_one({
         "user_id": request.user_id,
+        "user_name": request.user_name,
         "role": "user",
         "message": request.question,
         "timestamp": datetime.utcnow()
@@ -111,6 +114,7 @@ def chat(request: ChatRequest):
     # Save assistant msg
     collection.insert_one({
         "user_id": request.user_id,
+        "user_name": request.user_name,
         "role": "assistant",
         "message": response.content,
         "timestamp": datetime.utcnow()
