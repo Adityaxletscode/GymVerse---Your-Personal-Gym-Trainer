@@ -69,3 +69,42 @@ if (sidebar) {
     }
   });
 }
+
+// Settings Submenu Logic
+const settingsBtn = document.getElementById("settings-toggle");
+const settingsSubmenu = document.getElementById("settings-submenu");
+const darkModeBtn = document.getElementById("dark-mode-btn");
+const lightModeBtn = document.getElementById("light-mode-btn");
+const body = document.body;
+
+if (settingsBtn && settingsSubmenu) {
+  settingsBtn.addEventListener("click", () => {
+    if (settingsSubmenu.style.display === "none" || !settingsSubmenu.style.display) {
+      settingsSubmenu.style.display = "block";
+    } else {
+      settingsSubmenu.style.display = "none";
+    }
+  });
+}
+
+// Theme Logic
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme === "light") {
+  body.classList.add("light-mode");
+}
+
+if (darkModeBtn) {
+  darkModeBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    body.classList.remove("light-mode");
+    localStorage.setItem("theme", "dark");
+  });
+}
+
+if (lightModeBtn) {
+  lightModeBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+    body.classList.add("light-mode");
+    localStorage.setItem("theme", "light");
+  });
+}

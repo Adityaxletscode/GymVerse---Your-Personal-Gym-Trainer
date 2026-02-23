@@ -360,3 +360,56 @@ body.sidebar-expanded .heading h1 {
   }
 }
 
+/* Settings Submenu Styling */
+.settings-submenu {
+    background-color: #f9f9f9;
+    border-left: 2px solid #ccc;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.settings-submenu .sidebar-option {
+    padding-left: 30px;
+    font-size: 14px;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body.light-mode::before {
+    filter: brightness(1) opacity(0.1); 
+    background-color: #f4f4f4; 
+}
+
+body.light-mode .heading h1 {
+    color: #333;
+}
+
+body.light-mode .card {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+body.light-mode .card svg {
+    fill: #333;
+}
+
+body.light-mode .right-container h1 {
+    color: #333;
+}
+
+body.light-mode .left-container {
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+body.light-mode .sidebar-option:hover {
+    background-color: #e6e6e6;
+}
+
+
