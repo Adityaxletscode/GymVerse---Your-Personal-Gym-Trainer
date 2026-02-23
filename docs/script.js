@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const getStarted = document.querySelector(".get-started");
-  const learnMore = document.querySelector(".learn-more");
+
   const currentPath = window.location.pathname;
   const navLinks = document.querySelectorAll(".right-container a");
 
@@ -8,9 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.location.href = "./login-page/index.html";
   });
 
-  learnMore.addEventListener("click", function () {
-    window.location.href = "./info.txt";
-  });
+
 
   navLinks.forEach((link) => {
     const href = link.getAttribute("href");
