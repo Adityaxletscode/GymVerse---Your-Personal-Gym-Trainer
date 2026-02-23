@@ -176,6 +176,7 @@ const toggleBtn = document.querySelector(".sidebar-toggle");
 
 toggleBtn.addEventListener("click", () => {
   sidebar.classList.toggle("shrink");
+  document.querySelector('.header').classList.toggle('shrink');
 });
 
 if (sidebar) {
